@@ -19,6 +19,8 @@ h = torch.tensor([[1.,  1.,  1.,],
 
 
 while generation < 10000:
+    generation += 1
+
     # Apply convolution
     board = torch.nn.functional.conv2d(board, h, padding=1)
 
